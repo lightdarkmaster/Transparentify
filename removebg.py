@@ -34,4 +34,3 @@ print("Please provide the path of the image");
 print('---------------------------------');
 
 askForBgRemoval();
-    
