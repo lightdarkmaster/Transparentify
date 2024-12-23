@@ -20,11 +20,11 @@ def display_image(image_data):
     label.config(image=photo);
     label.Image = photo;
     
-def download_image(image_data):
-    file_path = filedialog.asksaveasfilename(defaultextension=".png");
-    if file_path:
-        with open(file_path, "wb") as output_file:
-            output_file.write(image_data);  
+def download_image():
+    if hasattr(label, 'Image'):
+        file_path = filedialog.asksaveasfilename(defaultextension=".png")
+        if file_path:
+            label.Image._PhotoImage__photo.write(file_path, format="png")
     
     
     
@@ -37,7 +37,8 @@ frame.pack(pady=20)
 
 upload_button = tk.Button(frame, text="Upload Image", command=upload_file);
 upload_button.pack(pady=20);
-download_button = tk.Button(frame, text="Download Image", command=lambda: download_image(label.Image.tobytes()));
+download_button = tk.Button(frame, text="Download Image", command=lambda: download_image());
+download_button.pack(pady=20);
 
 label = tk.Label(root);
 label.pack(pady=20);
