@@ -20,6 +20,7 @@ def display_image(image_data):
     label.config(image=photo);
     label.Image = photo;
     
+    
 def download_image():
     if hasattr(label, 'Image'):
         file_path = filedialog.asksaveasfilename(defaultextension=".png")
