@@ -30,18 +30,24 @@ def download_image():
     
     
 root = tk.Tk()
-root.title("Remove Background");
-root.geometry("800x600");
+root.title("Remove Background")
+root.geometry("800x600")
+root.configure(bg="#f0f0f0")
 
-frame = tk.Frame(root);
-frame.pack(pady=20)
+frame = tk.Frame(root, bg="#ffffff", bd=2, relief="groove")
+frame.pack(pady=20, padx=20, fill="both", expand=True)
 
-upload_button = tk.Button(frame, text="Upload Image", command=upload_file);
-upload_button.pack(pady=20);
-download_button = tk.Button(frame, text="Download Image", command=lambda: download_image());
-download_button.pack(pady=20);
+title_label = tk.Label(frame, text="Remove Background from Image", font=("Helvetica", 16), bg="#ffffff")
+title_label.pack(pady=10)
 
-label = tk.Label(root);
-label.pack(pady=20);
+upload_button = tk.Button(frame, text="Upload Image", command=upload_file, bg="#4CAF50", fg="white", font=("Helvetica", 12))
+upload_button.pack(pady=20)
+
+download_button = tk.Button(frame, text="Download Image", command=lambda: download_image(), bg="#008CBA", fg="white", font=("Helvetica", 12))
+download_button.pack(pady=20)
+
+label = tk.Label(frame, bg="#ffffff")
+label.pack(pady=20)
+
 
 root.mainloop();
