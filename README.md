@@ -7,7 +7,12 @@ My simple Python script for removing the background of an image using Python.
 1. [rembg](https://github.com/danielgatis/rembg)
 2. [PIL](https://pypi.org/project/pillow/)
 
-## 🚀 How to Use the Script
+## This Project came now with a two options to run 
+1. Using CLI
+2. Using the UI
+
+
+## 🚀 How to Use the Script using CLI
 
 1. 📁 Create an `image` folder where you can store the image you want to remove the background.
 2. 📝 In the same directory, create a Python file `removebg.py` and copy the code.
@@ -17,6 +22,11 @@ My simple Python script for removing the background of an image using Python.
 6. ⏳ Wait for the execution; sometimes it will take a few seconds or more depending on the device used.
 7. 🎉 Enjoy...
 
+
+## Using UI
+1. Run the code
+2. Very simple UI and easy to understand.
+3. have a descriptive buttons functionalities so easy to use.
 ## 🖼️ Example
 
 Here is an example of how to use the script:
