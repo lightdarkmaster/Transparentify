@@ -26,6 +26,10 @@ def download_image():
         file_path = filedialog.asksaveasfilename(defaultextension=".png")
         if file_path:
             label.Image._PhotoImage__photo.write(file_path, format="png")
+            
+def clearImage():
+    label.config(image=None);
+    label.Image = None;
     
     
     
@@ -45,6 +49,9 @@ upload_button.pack(pady=20)
 
 download_button = tk.Button(frame, text="Download Image", command=lambda: download_image(), bg="#008CBA", fg="white", font=("Helvetica", 12))
 download_button.pack(pady=20)
+
+clear_button = tk.Button(frame, text="Clear Image", command=clearImage, bg="#f44336", fg="white", font=("Helvetica", 12))
+clear_button.pack(pady=20);
 
 label = tk.Label(frame, bg="#ffffff")
 label.pack(pady=20)
